@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Launching LightLink and Spotify</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 1. Launch LightLink via Microsoft Store URI
+      window.location.href = "ms-windows-store://pdp/?ProductId=9N2ZXW95C5TJ";
+
+      // 2. Wait 3 seconds, then launch Spotify track via URI
+      setTimeout(() => {
+        // Open Spotify and play a specific track
+        window.location.href = "spotify:track:4uLU6hMCjMI75M1A2tKUQC";
+      }, 3000);
+
+      // 3. Close tab after another 2 seconds (optional, might fail depending on browser)
+      setTimeout(() => {
+        window.open('', '_self', '');
+        window.close();
+      }, 5000);
+    </script>
+
+    <p>Launching LightLink and Spotify... You may close this tab manually if needed.</p>
+  </body>
+</html>
